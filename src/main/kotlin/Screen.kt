@@ -118,5 +118,3 @@ sealed class Screen(
         const val EXIT_CAPTION = "Выход"
     }
 }
-
-
