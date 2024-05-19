@@ -8,7 +8,6 @@ data class Menu(
     fun print() {
         var id = 0
 
-        println()
         println(title)
         items.forEach { println("${id++}. ${it.title}") }
     }

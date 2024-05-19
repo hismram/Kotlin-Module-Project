@@ -7,9 +7,9 @@ enum class ItemTypes(val title: String, val mainAction: String): Printable {
             return title
         }
     },
-    NOTES_STORAGE("Список заметок:", "Создать заметку") {
+    NOTES_STORAGE("Список заметок в архиве", "Создать заметку") {
         override fun getTitle(name: String?): String {
-            return "Архив \"$name\"\n$title"
+            return "$title \"$name\":"
         }
     },
     NOTE("Заметка", "Просмотреть заметку") {

@@ -13,7 +13,6 @@ sealed class Screen(
         try {
             menu!!.items[id].action.invoke()
         } catch (e: IndexOutOfBoundsException) {
-            println()
             println("Пункт под номером $id не существует, повторите ввод")
         }
     }

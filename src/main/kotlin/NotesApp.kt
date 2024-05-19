@@ -20,7 +20,6 @@ class NotesApp {
         try {
             command = line.toInt()
         } catch(e: NumberFormatException) {
-            println()
             println("Допустимы только номера пунктов меню, повторите ввод")
             return
         }
