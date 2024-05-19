@@ -31,7 +31,7 @@ class NotesApp {
     /**
      * Запускает приложение, выводит меню
      */
-    private fun start() {
+    fun start() {
         while (true) {
             screen.printMenu()
             execute(Listener.listen())
@@ -39,3 +39,4 @@ class NotesApp {
     }
 
 }
+
