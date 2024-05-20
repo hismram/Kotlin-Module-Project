@@ -57,13 +57,13 @@ sealed class Screen(
         onChangeScreen: (Screen) -> Unit
     ) : Screen(onChangeScreen, parent) {
         override fun initMenu() {
-            val menuItems = storage.items.map { MenuItem(it.name) { open(it) } }
+            val menuItems = storage.items.map { MenuItem(it.name) { open(it) } }.toMutableList()
 
-            menuItems.addFirst(MenuItem(storage.type.mainAction) {
+            menuItems.add(0, MenuItem(storage.type.mainAction) {
                 storage.create()
                 initMenu()
             })
-            menuItems.addLast(MenuItem(EXIT_CAPTION) { back() })
+            menuItems.add(MenuItem(EXIT_CAPTION) { back() })
 
             menu = Menu(
                 storage.type.getTitle(storage.name),
